@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script> 
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="black"></a-sky>
+        <a-entity star-system="color:#14274e;count: 1000; radius: 250; depth: 0"></a-entity>
+
+
+
+        <a-light color="red" position="-1 1 0"></a-light>
+        <a-light type="point" color="blue" position="0 5 0"></a-light>
+
+        <a-light type="point" color="blue" position="0 15 0" animation="property: rotation; to: 10 60 0; loop: true; dur: 10"></a-light>
+        <a-light color="red" position="1 1 0"></a-light>
+
+        <a-light type="point" color="blue" position="10 15 0" animation="property: rotation; to: 10 60 0; loop: true; dur: 10"></a-light>
+        <a-entity camera look-controls wasd-controls="acceleration: 100" position="1 1 1"></a-entity>
+
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+          <a-sphere position="5 2 0" material="opacity: 0.1; transparent: true;"></a-sphere>
+        </a-entity>
+
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 100000">
+          <a-sphere position="50 2 0" material="opacity: 0.1; transparent: true;"></a-sphere>
+        </a-entity>
+
+
+        <a-plane height="1000" width="1000" material="opacity: 0.3; transparent: true; color: #000" rotation="-90 0 0"></a-plane>
+    </a-scene>
+  </body>
+</html>
